@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="harker.css" />
+  </head>
+  <body>
+    <div class="button-wrapper">
+      <button class="confetti-button">Yay🎉</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script>
+      document.getElementsByClassName("confetti-button")[0].addEventListener("click", () => {
+        var end = Date.now() + (15 * 1000);
+
+        // go Buckeyes!
+        var colors = ['#1A3A12', '#e6e6e6'];
+
+        (function frame() {
+          confetti({
+            particleCount: 2,
+            angle: 60,
+            spread: 55,
+            origin: { x: 0 },
+            colors: colors
+          });
+          confetti({
+            particleCount: 2,
+            angle: 120,
+            spread: 55,
+            origin: { x: 1 },
+            colors: colors
+          });
+
+          if (Date.now() < end) {
+            requestAnimationFrame(frame);
+          }
+        }());
+      });
+    </script>
+  </body>
+</html>

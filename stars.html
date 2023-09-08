@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="stars.css" />
+  </head>
+  <body>
+    <div class="button-wrapper">
+      <button class="confetti-button">i'm a ⭐</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script>
+      document.getElementsByClassName("confetti-button")[0].addEventListener("click", () => {
+        var defaults = {
+          spread: 360,
+          ticks: 50,
+          gravity: 0,
+          decay: 0.94,
+          startVelocity: 30,
+          shapes: ['star'],
+          colors: ['FFE400', 'FFBD00', 'E89400', 'FFCA6C', 'FDFFB8']
+        };
+
+        function shoot() {
+          confetti({
+            ...defaults,
+            particleCount: 40,
+            scalar: 1.2,
+            shapes: ['star']
+          });
+
+          confetti({
+            ...defaults,
+            particleCount: 10,
+            scalar: 0.75,
+            shapes: ['circle']
+          });
+        }
+
+        setTimeout(shoot, 0);
+        setTimeout(shoot, 100);
+        setTimeout(shoot, 200);
+      });
+    </script>
+  </body>
+</html>

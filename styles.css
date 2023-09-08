@@ -1,0 +1,69 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin:0;
+    display: flex;
+    background:rgb(255, 255, 255);
+    background-size: cover;
+    overflow: hidden;
+    font-family: Montserrat;
+  }
+  
+a{
+    text-align: center;
+    text-decoration: none;
+    font-family: Montserrat;
+    font-variant: small-caps;
+    line-height: 250%;
+    font-size: larger;
+}
+
+h1{
+    text-align: center;
+    text-decoration: none;
+    font-family: Montserrat;
+    font-variant: small-caps;
+    line-height: 250%;
+    font-size: 50px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: 1s;
+}
+
+li a.active {
+  background-color: #04AA6D;
+  color: white;
+  transition: 1s;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+  transition: 0.5s;
+}
